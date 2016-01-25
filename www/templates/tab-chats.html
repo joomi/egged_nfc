@@ -1,4 +1,4 @@
-<ion-view view-title="Current childs">
+<ion-view view-title="רשימת נוסעים">
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
@@ -8,9 +8,10 @@
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
+          מחיקה
         </ion-option-button>
       </ion-item>
     </ion-list>
+    <button ng-if="chats.length == 0" class="button button-full button-positive">לא רשומים ילדים</button>
   </ion-content>
 </ion-view>

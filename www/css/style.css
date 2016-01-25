@@ -1,3 +1,18 @@
 /* Empty. Add your own CSS if you like */
-.bar.bar-stable.egged .title{ background:#038f4a url("../img/egged.png") 5% 50% no-repeat; background-size: auto 90%;margin: 0 0;
-    color: #FFF;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ font-family: Arial}
+*{ font-family: Arial !important; direction: rtl}
+.bar.bar-stable.egged .title{
+  background:#038f4a url("../img/egged.png") 5% 50% no-repeat;
+  background-size: auto 90%;
+  margin: 0 0;
+  color: #FFF;
+  padding-left: 18%;
+  text-indent: 18%;
+}
+.item-input{    padding: 6px 16px 5px 0;}
+.bar .title.title-left{ text-align: center !important;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{padding-right: 0}
+[nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar {
+  background: transparent;
+  direction: ltr;
+}

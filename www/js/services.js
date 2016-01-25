@@ -30,3 +30,6 @@ angular.module('starter.services', [])
     }
   };
 });
+//  .factory('Nfc', function() {
+//
+//});

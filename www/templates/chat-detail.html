@@ -8,7 +8,7 @@
   <ion-content class="padding">
     <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
     <p>
-      {{chat.phone}}<br>
+      <a href="tel:{{chat.phone}}">התקשר: {{chat.phone}}</a> <br>
       {{chat.comments}}
     </p>
   </ion-content>
