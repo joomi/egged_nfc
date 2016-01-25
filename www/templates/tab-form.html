@@ -1,0 +1,28 @@
+<ion-view view-title="Register a child">
+  <ion-content class="padding">
+    <h3>Welcome to Egged child control</h3>
+    <p>
+    Please input the child personal info.
+    </p>
+    <form name="childForm" ng-submit="createTask(task)">
+      <div class="list">
+        <label class="item item-input">
+          <input required type="text" placeholder="Full Name" ng-model="task.name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="I.D num" ng-model="task.id">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="parent Phone" ng-model="task.phone">
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Comments" ng-model="task.comments"></textarea>
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Submit</button>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>
