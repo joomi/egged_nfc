@@ -1,0 +1,28 @@
+<ion-view view-title="הוסף ילד">
+  <ion-content class="padding">
+    <h3>ברוכים הבאים למערכת ניהול הסעות אגד</h3>
+    <p>
+    נא להזין את פרטי התלמיד בשדות הבאים.
+    </p>
+    <form name="childForm" ng-submit="createTask(task)">
+      <div class="list">
+        <label class="item item-input">
+          <input required type="text" placeholder="שם מלא" ng-model="task.name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="תעודת זהות" ng-model="task.id">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="טלפון הורים" ng-model="task.phone">
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="הערות" ng-model="task.comments"></textarea>
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">הצמד ושמור מדבקה</button>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>
