@@ -27,16 +27,20 @@ angular.module('starter.controllers', [])
   nfc.addNdefListener(
     function (nfcEvent) {
       var tag = nfcEvent.tag,
-        ndefMessage = tag.ndefMessage;
-
-      // dump the raw json of the message
-      // note: real code will need to decode
-      // the payload from each record
+          ndefMessage = tag.ndefMessage;
       alert(JSON.stringify(ndefMessage));
-
-      // assuming the first record in the message has
-      // a payload that can be converted to a string.
       alert(nfc.bytesToString(ndefMessage[0].payload).substring(3));
+
+      var newChild = Chats.scan(ndefMessage);
+      if(newChild !== false && newChild !== null) {
+        $scope.chats.push({
+          name: newChild.name,
+          id: newChild.id,
+          phone: newChild.phone,
+          face: newChild.face,
+          comments: newChild.comments
+        });
+      }
     },
     function () { // success callback
       alert("Waiting for NDEF tag");
